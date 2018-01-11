@@ -35,7 +35,7 @@ describe('HighlightDirective', () => {
 
   it('should highlight the second element with default color', () => {
     const de = fixture.debugElement.queryAll(By.css('p'))[1];
-    let directive = de.injector.get(HighlightDirective);
+    const directive = de.injector.get(HighlightDirective);
     expect(de.nativeElement.style.backgroundColor).toBe(directive.defaultColor);
   });
 });
